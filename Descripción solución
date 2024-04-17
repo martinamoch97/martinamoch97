@@ -1,0 +1,34 @@
+MELI
+
+Decidí realizar este ejercicio para Mercado libre Argentina.
+Lo que se requiere es identificar a los sellers que tienes un buen perfil y son relevantes para el negocio, por lo que decidí descargar  de MLA todas las categorías y tomar los siguientes campos:
+ - id_category
+ - name_category
+ - seller_id
+ - seller_nickname
+ - id_product
+ - currency 
+ - title
+ - price
+ - condition
+ - available_quantity
+ - free_shipping
+
+Después de obtener esta información, vi que podía obtener información sobre la calificación que tiene cada vendedor, por lo que cree columnas vacías que se llenan con una iteración sobre la calificación de cada vendedor. 
+De esta tomé las siguientes variables:
+ - seller_id
+ - seller_reputation
+ - level_id
+ - power_seller_status
+ - period
+ - total
+
+De ahí cree diccionarios vacíos para que los data frames generados se separaran por categorías.
+
+Una vez iterando por categoría comienza el análisis exploratorio de datos, obteniendo la medio de precio por vendedor y con eso grafiqué la distribución de precio promedio de los primeros 20 vendedores. 
+Después conté cuántos productos tiene listado cada vendedor y grafiqué los top 20 vendedores con más productos listados.
+De ahí obtuve un box plot para ver la relación entre el envío gratis y los precios y por último conté la condición de los productos por vendedor para ver qué tantos son nuevos y qué tantos son usados y tomé al top 20.
+
+De ahí usé un modelo multinomial, usando el power seller status como variable de decisión. Y obtenemos las gráficas de nuestro top 20 por categoría.
+
+Adicional a este cree un reporte de clasificación para ver qué tan buenos fueron los resultados.
