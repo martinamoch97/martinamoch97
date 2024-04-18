@@ -20,6 +20,10 @@ categories = cats.json()  # Convertimos el modelo a una lista para poder trabaja
 # Convertimos la lista a un DataFrame
 dfcategories = pd.DataFrame(categories)
 
+# Comentar o Descomentar esta linea para solo una categoria
+dfcategories = dfcategories[dfcategories['id'] == 'MLA1051']
+dfcategories = dfcategories.reset_index(drop=True)
+
 # DataFrame vacío para almacenar los datos completos
 df_completo = pd.DataFrame()
 
